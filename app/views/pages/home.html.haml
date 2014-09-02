@@ -1,0 +1,22 @@
+%section.row.clearfix#content-details
+  %article.col-sm-8#details-article
+    %h1#article-title Champion: <span class="font-weight-light">Fight For Your Life</span>
+    %h3 <small>By <a href="#" data-toggle="modal" data-target="#author-modal">Stuart Welch</a></small></h3>
+    %p A Champion is defined as one that does battle, defeating all opponents so as to hold first place.  The book "Champion - Fight For Your Life" is a book in regards to battling some of life's greatest challenges and overcoming some tremendous obstacles, just like a Champion - to defeat every opponent and to take first place in your life.  And as the championship fights of old, there is no round limitation in the fight for your life.
+    %p Just because we are "saved" by the Grace of God and we live our lives as christians, does not mean that we are exempt from some of the greatest struggles and devastations that we will ever face in our life.  Just to name a few:  financial difficulties, bankruptcies, loss of a job, shutting down of the company, marital difficulties, divorce, raising our children, death and other extreme tragedies that may come into our life; accidents, house fires, drug abuse and addictions, molestation & abandonment, incarceration and others of life's struggles.
+    %p This book chronicles challenges that brought tears & fears into my life; ridicule and embarassment, then triumph and joy.  It demonstrates the ability to persevere through some of life's most difficult circumstances.  However, it's not our circumstances that determine our destiny, it's the decisions we make when confronted by them.  Knocked down, but never out - A Champion always rises to their feet and stays in the fight.  No one ever said it would be easy - but it's always worth it.  You were created a Champion, don't give up and don't give in - VICTORY belongs to you. 
+    %p Get your copy of Champion - Fight For Your Life today!
+  %aside.col-sm-4#details-aside
+    / = form_tag charges_path, id: 'chargeForm' do
+    /   = javascript_include_tag "https://checkout.stripe.com/v2/checkout.js"
+    /   = hidden_field_tag 'stripeToken'
+    /   = hidden_field_tag 'stripeEmail'
+    /   = hidden_field_tag 'amount', 499
+    /   %button.btn.btn-success.btn-lg.btn-block#btn-buy{:type => "button"} <span class="glyphicon glyphicon-ok"></span>I want this!</button>
+    /   = javascript_include_tag "stripe"
+    %ul.list-group#details-infobox
+      %li.list-group-item.active.clearfix DETAILS
+      %li.list-group-item You'll get Chamption: Fight For Your Life
+      %li.list-group-item.clearfix
+        %span.pull-left.content-qualifier Length
+        %span.pull-right 30 minutes

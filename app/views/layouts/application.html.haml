@@ -1,0 +1,41 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %title One Month Stripe Payments
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    = stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800"
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .container#content
+      %header#content-header
+        #price-container
+          <span class="glyphicon glyphicon-tag"></span><span class="price">$14.95</span>
+        = image_tag('header-image.jpg', class:"img-responsive", id: 'content-header-img', alt: "Stuart Welch")
+      = yield
+    %footer#site-footer
+      Made by Rasheed Bustamam
+    .modal.fade#author-modal
+      .modal-dialog
+        .modal-content
+          .modal-header
+            %h4.modal-title <span class="glyphicon glyphicon-user"> About Stuart</span>
+          .modal-body.clearfix
+            .pull-right#modal-right
+              = image_tag('teacher-image.png', class:"img-responsive", alt: "Stuart Welch")
+            %p I am a father, a husband, a pastor, high school coach, a social change agent, chaplain, author, speaker and an entrepreneur.  I know it sounds like a lot, but I have been so fortunate to have tremendous mentors and teachers to help me carefully blend all these roles together and make them work for the success of others and myself.  
+
+            %p My true passion has always been to help & assist others.  From the time I applied for and was accepted to the police academy, my desire has been to offer help and services to those in need.  That was the beginning of my development in service.  I used my talents and growing skills to implement programs of change through some of the most challenging areas of the city I served.  Not knowing that this would change my career focus and life goals.  After nealry (10) years, I left the law enforcement industry and launched my first business - Peace Keepers Private Security, Inc.  
+
+            %p For over (15) years I utilized Peace Keepers as a vehicle to help others.  Employ the unemployable, teach and train office staff in areas of legendary customer service, soft skills, phone etiquette, sales scripting and marketing.  While in the field of security, I trained ordinary men and women in the critical areas of providing security and safety to every client, no matter how big or small.  Teaching skills like report writing, site assessment, position of interview and officer safety skills.  Integrating current and former police officers and investigators to train and teach nearly (100) security officers.  It would be impossible to count the number of Peace Keeper's employees that went on to great careers in law enforcement, business, banking, sales, security company ownership and on and on.  
+
+            %p While operating Peace Keepers, I was blessed and led to launch and operate Bread of Life Ministries.  A local church with long reaching arms into neighboring communities, feeding the hungry, clothing the naked and helping the poor.  Bread of Life quickly became a place people in need would flock to.  Grocery giveaways, free thanksgiving community dinners, Wal Mart shopping sprees, graffitti abatement, prison ministry in California and Washington, Cops verse Kids basketball just to name a few.  And after several years pastoring Bread of Life, the call to return to law enforcement came.  Endorsed by then Chief of Police, Brian Banducci, I joined Lead Chaplain Lee Shaw and the Napa County Law Enforcement Chaplaincy as the Chaplian for the Police and Fire Depts.  Soon becoming one of the first P.O.S.T. certified L.E. Chaplains in the Nation.  
+
+            %p It is the experiences detailed above that have equipped me to encourage others, teach others, train others and mentor many.  In 2013 I authored my first book, "CHAMPION - Fight For Your Life" and inspiring and encouraging book that will reach millions.  Other workbooks such as, "Living in Ruins" and "Defeating Discouragement" are life lessons that will bring a change in your family, marriage, job and life.  
+
+            %p I am married to the greatest teammate on the planet - Chrystal Welch and together we have (5) children.  I hold degrees in Computer Science, Theology and Administration of Justice.  Certification in Christian Education, Business Ownership & Operation, Social Welfare Administration & NFHS Coaching.
+          .modal-footer
+            %button.btn.btn-default{:type => 'button', :data => {:dismiss => "modal"}} Close
